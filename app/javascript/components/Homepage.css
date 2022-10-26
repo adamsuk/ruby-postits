@@ -1,0 +1,57 @@
+.homepage__container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage__postit-title {
+  font-family: 'Lato';
+  /* font-family: "Reenie Beanie"; */
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.homepage__postit-description {
+  font-family: 'Reenie Beanie';
+  font-size: 3rem;
+}
+
+.homepage__postit {
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-decoration: none;
+  color: #000;
+  background: #ffc;
+  /* display: block; */
+  min-height: 350px;
+  max-width: 500px;
+  min-width: 50px;
+  padding: 1em;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  transform: rotate(-6deg);
+  transition: transform 0.5s ease;
+}
+
+.homepage__postit hr {
+  width: 100%;
+  border: 2px solid black;
+}
+
+.homepage__postit p {
+  margin: 1em;
+
+  border: none;
+  outline: none;
+  background: inherit;
+  resize: none;
+
+  width: 100%;
+
+  user-select: none;
+  text-align: center;
+}

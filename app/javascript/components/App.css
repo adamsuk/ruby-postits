@@ -1,7 +1,6 @@
-html,
-body {
-  margin: 0;
+html, body, #root {
   height: 100%;
+  margin: 0;
 }
 
 .mainContainer {
@@ -10,14 +9,4 @@ body {
   position: relative;
   border-radius: 7px;
   margin: 0 auto;
-}
-
-.topHeading {
-  color: rgb(48, 2, 2);
-  /* font-family: 'Lato'; */
-  font-family: 'Reenie Beanie';
-  font-size: 2rem;
-  /* padding: 7px;
-  margin: 20px 0; */
-  text-align: center;
 }

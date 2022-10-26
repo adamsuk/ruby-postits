@@ -1,16 +1,22 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
+import Homepage from './Homepage';
 import PostitContainer from './PostitContainer';
 
 import './App.css';
 
-export default App = () => {
-  return (
-    <div className="mainContainer">
-      <div className="topHeading">
-        <h1>Simple Post-its</h1>
-      </div>
-      <PostitContainer />
-    </div>
-  );
-};
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="/:workspaceId" element={<PostitContainer />} />
+      <Route path="/" element={<Homepage />} />
+    </Routes>
+  </Router>
+);
+
+export default App;

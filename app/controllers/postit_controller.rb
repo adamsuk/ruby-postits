@@ -5,8 +5,17 @@ class PostitController < ApplicationController
     render json: Postit.order("updated_at DESC")
   end
 
+  def show
+    params.permit(:id)
+    puts "HERRRREEE!"
+    puts params
+    render json: Postit.order("updated_at DESC")
+  end
+
   def create
+    params.require([:postit, :workspace_id])
     postit = Postit.create(postit_params)
+    pm = PostitMapping.create(postit_id: postit.id, workspace_id: params[:workspace_id])
     render json: postit
   end
 
@@ -17,13 +26,15 @@ class PostitController < ApplicationController
   end
 
   def destroy
+    params.permit(:workspace_id)
+    puts params
     postit = Postit.find(params[:id])
     postit.destroy
-    render json:
+    render json: postit
   end
 
   private
     def postit_params
-      params.require(:postit).permit(:title, :description, :done)
+      params.require(:postit).permit(:title, :description, :done, :session_id)
     end
 end

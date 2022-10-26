@@ -4,7 +4,7 @@ import Postit from './Postit';
 
 import './Postits.css';
 
-const PostIts = ({ postits = [] }) => {
+const PostIts = ({ callback, workspaceId, postits = [] }) => {
   const [currentPostits, setCurrentPostits] = useState(postits);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const PostIts = ({ postits = [] }) => {
       {currentPostits.map((postit) => {
         return (
           <li key={postit.id} className="postits-item">
-            <Postit postit={postit} className="postits-item__postit" />
+            <Postit postit={postit} className="postits-item__postit" workspaceId={workspaceId} callback={callback} />
           </li>
         );
       })}
