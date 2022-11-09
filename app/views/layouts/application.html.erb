@@ -6,10 +6,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%# <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %> %>
+    <%# <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %> %>
   
     <%= favicon_link_tag asset_path('sticky-note.png') %>
+
+    <link rel="manifest" href="/manifest.json">
 
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Reenie Beanie' rel='stylesheet' type='text/css'>

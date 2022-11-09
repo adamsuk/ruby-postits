@@ -5,6 +5,6 @@ Rails.application.routes.draw do
       resources :workspace, only: [:show, :create]
     end
   end
-  get ':session_id', to: 'root#index'
-  root 'root#index'
+  # get ':session_id', to: 'root#index'
+  # root 'root#index'
 end
