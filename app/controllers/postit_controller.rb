@@ -1,4 +1,6 @@
-class PostitController < ApplicationController  
+class PostitController < ApplicationController
+  protect_from_forgery with: :null_session
+  
   def index
     render json: Postit.order("updated_at DESC")
   end

@@ -1,4 +1,6 @@
-class WorkspaceController < ApplicationController  
+class WorkspaceController < ApplicationController
+  protect_from_forgery with: :null_session
+  
   def show
     workspace = Workspace.includes(:postit_mappings).where(id: params[:id])
     postits = []
