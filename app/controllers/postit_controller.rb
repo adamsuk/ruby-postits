@@ -1,14 +1,10 @@
-class PostitController < ApplicationController
-  protect_from_forgery with: :null_session
-  
+class PostitController < ApplicationController  
   def index
     render json: Postit.order("updated_at DESC")
   end
 
   def show
     params.permit(:id)
-    puts "HERRRREEE!"
-    puts params
     render json: Postit.order("updated_at DESC")
   end
 
